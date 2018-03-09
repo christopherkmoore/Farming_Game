@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		032DA538205248D70085BA83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA537205248D70085BA83 /* AppDelegate.swift */; };
+		032DA53A205248D70085BA83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA539205248D70085BA83 /* ViewController.swift */; };
+		032DA53D205248D70085BA83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032DA53B205248D70085BA83 /* Main.storyboard */; };
+		032DA53F205248D70085BA83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032DA53E205248D70085BA83 /* Assets.xcassets */; };
+		032DA542205248D70085BA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032DA540205248D70085BA83 /* LaunchScreen.storyboard */; };
+		032DA54D205248D70085BA83 /* Generic_Timer_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA54C205248D70085BA83 /* Generic_Timer_GameTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		032DA549205248D70085BA83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032DA52C205248D70085BA83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 032DA533205248D70085BA83;
+			remoteInfo = Generic_Timer_Game;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		032DA534205248D70085BA83 /* Generic_Timer_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic_Timer_Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		032DA537205248D70085BA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		032DA539205248D70085BA83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		032DA53C205248D70085BA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		032DA53E205248D70085BA83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		032DA541205248D70085BA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		032DA543205248D70085BA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032DA548205248D70085BA83 /* Generic_Timer_GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Generic_Timer_GameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		032DA54C205248D70085BA83 /* Generic_Timer_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generic_Timer_GameTests.swift; sourceTree = "<group>"; };
+		032DA54E205248D70085BA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		032DA531205248D70085BA83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032DA545205248D70085BA83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		032DA52B205248D70085BA83 = {
+			isa = PBXGroup;
+			children = (
+				032DA536205248D70085BA83 /* Generic_Timer_Game */,
+				032DA54B205248D70085BA83 /* Generic_Timer_GameTests */,
+				032DA535205248D70085BA83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		032DA535205248D70085BA83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				032DA534205248D70085BA83 /* Generic_Timer_Game.app */,
+				032DA548205248D70085BA83 /* Generic_Timer_GameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		032DA536205248D70085BA83 /* Generic_Timer_Game */ = {
+			isa = PBXGroup;
+			children = (
+				032DA537205248D70085BA83 /* AppDelegate.swift */,
+				032DA539205248D70085BA83 /* ViewController.swift */,
+				032DA53B205248D70085BA83 /* Main.storyboard */,
+				032DA53E205248D70085BA83 /* Assets.xcassets */,
+				032DA540205248D70085BA83 /* LaunchScreen.storyboard */,
+				032DA543205248D70085BA83 /* Info.plist */,
+			);
+			path = Generic_Timer_Game;
+			sourceTree = "<group>";
+		};
+		032DA54B205248D70085BA83 /* Generic_Timer_GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				032DA54C205248D70085BA83 /* Generic_Timer_GameTests.swift */,
+				032DA54E205248D70085BA83 /* Info.plist */,
+			);
+			path = Generic_Timer_GameTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		032DA533205248D70085BA83 /* Generic_Timer_Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032DA551205248D70085BA83 /* Build configuration list for PBXNativeTarget "Generic_Timer_Game" */;
+			buildPhases = (
+				032DA530205248D70085BA83 /* Sources */,
+				032DA531205248D70085BA83 /* Frameworks */,
+				032DA532205248D70085BA83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Generic_Timer_Game;
+			productName = Generic_Timer_Game;
+			productReference = 032DA534205248D70085BA83 /* Generic_Timer_Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		032DA547205248D70085BA83 /* Generic_Timer_GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032DA554205248D70085BA83 /* Build configuration list for PBXNativeTarget "Generic_Timer_GameTests" */;
+			buildPhases = (
+				032DA544205248D70085BA83 /* Sources */,
+				032DA545205248D70085BA83 /* Frameworks */,
+				032DA546205248D70085BA83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				032DA54A205248D70085BA83 /* PBXTargetDependency */,
+			);
+			name = Generic_Timer_GameTests;
+			productName = Generic_Timer_GameTests;
+			productReference = 032DA548205248D70085BA83 /* Generic_Timer_GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		032DA52C205248D70085BA83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Christopher Moore";
+				TargetAttributes = {
+					032DA533205248D70085BA83 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					032DA547205248D70085BA83 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 032DA533205248D70085BA83;
+					};
+				};
+			};
+			buildConfigurationList = 032DA52F205248D70085BA83 /* Build configuration list for PBXProject "Generic_Timer_Game" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 032DA52B205248D70085BA83;
+			productRefGroup = 032DA535205248D70085BA83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				032DA533205248D70085BA83 /* Generic_Timer_Game */,
+				032DA547205248D70085BA83 /* Generic_Timer_GameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		032DA532205248D70085BA83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032DA542205248D70085BA83 /* LaunchScreen.storyboard in Resources */,
+				032DA53F205248D70085BA83 /* Assets.xcassets in Resources */,
+				032DA53D205248D70085BA83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032DA546205248D70085BA83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		032DA530205248D70085BA83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032DA53A205248D70085BA83 /* ViewController.swift in Sources */,
+				032DA538205248D70085BA83 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032DA544205248D70085BA83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032DA54D205248D70085BA83 /* Generic_Timer_GameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		032DA54A205248D70085BA83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 032DA533205248D70085BA83 /* Generic_Timer_Game */;
+			targetProxy = 032DA549205248D70085BA83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		032DA53B205248D70085BA83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032DA53C205248D70085BA83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		032DA540205248D70085BA83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032DA541205248D70085BA83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		032DA54F205248D70085BA83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		032DA550205248D70085BA83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		032DA552205248D70085BA83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7UCV2ESBZ;
+				INFOPLIST_FILE = Generic_Timer_Game/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherkmoore.Generic-Timer-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		032DA553205248D70085BA83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7UCV2ESBZ;
+				INFOPLIST_FILE = Generic_Timer_Game/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherkmoore.Generic-Timer-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		032DA555205248D70085BA83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7UCV2ESBZ;
+				INFOPLIST_FILE = Generic_Timer_GameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherkmoore.Generic-Timer-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Generic_Timer_Game.app/Generic_Timer_Game";
+			};
+			name = Debug;
+		};
+		032DA556205248D70085BA83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7UCV2ESBZ;
+				INFOPLIST_FILE = Generic_Timer_GameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "christopherkmoore.Generic-Timer-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Generic_Timer_Game.app/Generic_Timer_Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		032DA52F205248D70085BA83 /* Build configuration list for PBXProject "Generic_Timer_Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032DA54F205248D70085BA83 /* Debug */,
+				032DA550205248D70085BA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		032DA551205248D70085BA83 /* Build configuration list for PBXNativeTarget "Generic_Timer_Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032DA552205248D70085BA83 /* Debug */,
+				032DA553205248D70085BA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		032DA554205248D70085BA83 /* Build configuration list for PBXNativeTarget "Generic_Timer_GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032DA555205248D70085BA83 /* Debug */,
+				032DA556205248D70085BA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 032DA52C205248D70085BA83 /* Project object */;
+}

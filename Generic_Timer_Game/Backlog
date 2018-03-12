@@ -1,0 +1,12 @@
+
+
+to do's that I think of that are basically a backlog or log for ideas
+
+pool the models?
+
+refactor. I've already made a huge fucking mess.
+
+
+THINGS I DON'T LIKE:
+
+the viewmodel on the market place is remade every time inventoryChanged fires + reloads entire table view

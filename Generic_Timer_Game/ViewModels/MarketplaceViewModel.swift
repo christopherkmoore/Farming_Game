@@ -14,7 +14,7 @@ class MarketplaceViewModel {
         return Inventory.shared.totalItem
     }
     
-    public func details(at index: Int) -> (name: String, count: String)? {
+    public func details(at index: Int) -> (item: Item, count: String)? {
         guard index < Inventory.shared.totalItem else {
             return nil
         }

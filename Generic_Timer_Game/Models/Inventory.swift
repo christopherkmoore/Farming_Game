@@ -12,58 +12,66 @@ class Inventory {
     
     public static let shared = Inventory()
     
-    var gold: Int = 0
+    private var gold: Int = 100
+    
+    public var totalItem: Int {
+        return items.count
+    }
+    
+    public var totalGold: Int {
+        return gold
+    }
     
     // TODO: need to make class for all the items and func for returning all of them
-    private var items: [Item] = [Item]()
+    private var items: [Item: Int] = [:]
     
-    public func add(item: String, count: Int) {
-       
+    public func add(item: Item, count: Int) {
+
         // holy hacky
         if let _ = items[item] {
             items[item]? += count
         } else {
             items[item] = 1
         }
-        
+
     }
-    public func item(for name: String) -> (name: String, count: String)? {
-        guard let count = items[name] else {
-            print("no item in inventory: \(name)")
-            return nil
-        }
-        
-        let stringCount = String(describing: count)
-        
-        return (name, stringCount)
+    
+    public func add(gold: Int) {
+        self.gold += gold
     }
-    public func item(at index: Int) -> (name: String, count: String)? {
-        
+    
+    public func remove(gold: Int) {
+        self.gold -= gold
+    }
+
+    public func item(at index: Int) -> (item: Item, count: String)? {
+
         let array = Array(items.keys)
-        
+
         let item = array[index]
-        
+
         guard let value = items[item] else {
             return nil
         }
-        
+
         let count = String(describing: value)
         return (item, count)
-        
+
     }
-    
-    public func decrease(item: String, count: Int) {
-       
+
+    public func decrease(item: Item, count: Int) {
+
         guard let itemCount = items[item],
             itemCount > count else {
                 return
         }
-        
+
         items[item]? -= count
     }
     
-    public var totalItem: Int {
-        return items.count
+    public func count(for item: Item) -> Int {
+        return items[item] ?? 0
     }
+    
     
 }

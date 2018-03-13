@@ -13,7 +13,6 @@
 		032DA53F205248D70085BA83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032DA53E205248D70085BA83 /* Assets.xcassets */; };
 		032DA542205248D70085BA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032DA540205248D70085BA83 /* LaunchScreen.storyboard */; };
 		032DA54D205248D70085BA83 /* Generic_Timer_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA54C205248D70085BA83 /* Generic_Timer_GameTests.swift */; };
-		032DA55920524A4C0085BA83 /* Turnip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA55820524A4C0085BA83 /* Turnip.swift */; };
 		032DA55B20524B820085BA83 /* Backlog in Resources */ = {isa = PBXBuildFile; fileRef = 032DA55A20524B820085BA83 /* Backlog */; };
 		032DA55E20524BC10085BA83 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA55D20524BC10085BA83 /* Item.swift */; };
 		032DA560205451660085BA83 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA55F205451660085BA83 /* Inventory.swift */; };
@@ -25,6 +24,7 @@
 		032DA57120560A350085BA83 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA57020560A350085BA83 /* ItemDetailsViewModel.swift */; };
 		032DA57320560B060085BA83 /* ItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032DA57220560B060085BA83 /* ItemDetailsViewController.xib */; };
 		032DA577205618C80085BA83 /* InventoryTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA576205618C80085BA83 /* InventoryTimerManager.swift */; };
+		03C2066920578062002ED28F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2066820578062002ED28F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 		032DA548205248D70085BA83 /* Generic_Timer_GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Generic_Timer_GameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		032DA54C205248D70085BA83 /* Generic_Timer_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generic_Timer_GameTests.swift; sourceTree = "<group>"; };
 		032DA54E205248D70085BA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		032DA55820524A4C0085BA83 /* Turnip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turnip.swift; sourceTree = "<group>"; };
 		032DA55A20524B820085BA83 /* Backlog */ = {isa = PBXFileReference; lastKnownFileType = text; path = Backlog; sourceTree = "<group>"; };
 		032DA55D20524BC10085BA83 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		032DA55F205451660085BA83 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		032DA57020560A350085BA83 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		032DA57220560B060085BA83 /* ItemDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailsViewController.xib; sourceTree = "<group>"; };
 		032DA576205618C80085BA83 /* InventoryTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTimerManager.swift; sourceTree = "<group>"; };
+		03C2066820578062002ED28F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,7 @@
 		032DA536205248D70085BA83 /* Generic_Timer_Game */ = {
 			isa = PBXGroup;
 			children = (
+				03C2066720578058002ED28F /* Helpers */,
 				032DA575205618BD0085BA83 /* Managers */,
 				032DA56D205609C50085BA83 /* ViewModels */,
 				032DA5692054548B0085BA83 /* Views */,
@@ -129,7 +130,6 @@
 		032DA55720524A3B0085BA83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				032DA55820524A4C0085BA83 /* Turnip.swift */,
 				032DA55D20524BC10085BA83 /* Item.swift */,
 				032DA55F205451660085BA83 /* Inventory.swift */,
 			);
@@ -178,6 +178,14 @@
 				032DA576205618C80085BA83 /* InventoryTimerManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		03C2066720578058002ED28F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				03C2066820578062002ED28F /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				032DA55E20524BC10085BA83 /* Item.swift in Sources */,
-				032DA55920524A4C0085BA83 /* Turnip.swift in Sources */,
 				032DA57120560A350085BA83 /* ItemDetailsViewModel.swift in Sources */,
 				032DA56F20560A270085BA83 /* ItemDetailsViewController.swift in Sources */,
 				032DA5632054522D0085BA83 /* MarketplaceViewController.swift in Sources */,
@@ -296,6 +303,7 @@
 				032DA577205618C80085BA83 /* InventoryTimerManager.swift in Sources */,
 				032DA560205451660085BA83 /* Inventory.swift in Sources */,
 				032DA53A205248D70085BA83 /* ViewController.swift in Sources */,
+				03C2066920578062002ED28F /* Extensions.swift in Sources */,
 				032DA538205248D70085BA83 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

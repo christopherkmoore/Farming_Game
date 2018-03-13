@@ -65,9 +65,10 @@ extension MarketplaceViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         
-        let item = viewModel?.details(at: indexPath.row)
-        guard let name = item?.name,
-            let count = item?.count else {
+        let tuple = viewModel?.details(at: indexPath.row)
+        
+        guard let name = tuple?.item.name,
+            let count = tuple?.count else {
                 return UITableViewCell()
         }
         
@@ -78,21 +79,16 @@ extension MarketplaceViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        guard let cell = tableView.cellForRow(at: indexPath) as? KeyValueDetailsTableViewCell else {
-            // I'm making an assumption about the cell which may not
-            // always be true
-            return
-        }
-        
+    
         // cheap error handling
-        guard let item = Inventory.shared.item(for: cell.keyLabel.text ?? "") else {
+        guard let item = viewModel?.details(at: indexPath.row)?.item else {
             return
         }
         
         let detailsVC = ItemDetailsViewController.create()
         
-//        detailsVC.item = item
+        detailsVC.item = item
+        present(detailsVC, animated: true)
         
     }
     

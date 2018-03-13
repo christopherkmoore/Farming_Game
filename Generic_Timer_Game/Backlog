@@ -10,3 +10,6 @@ refactor. I've already made a huge fucking mess.
 THINGS I DON'T LIKE:
 
 the viewmodel on the market place is remade every time inventoryChanged fires + reloads entire table view
+
+
+hash value of Items is based on subclass accessibility name bad bad bad

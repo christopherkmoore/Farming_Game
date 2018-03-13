@@ -16,24 +16,23 @@ class ViewController: UIViewController {
         
     @IBAction func increment(_ sender: Any) {
         
-        InventoryTimerManager.shared.increment(item: Turnip(), after: Turnip.time) { success in
+        let turnip = Food(time: 0.5, name: "Turnip", minPrice: 10, maxPrice: 15)
+        
+        InventoryTimerManager.shared.increment(food: turnip) { success in
             
             guard success == true else {
                 return
             }
             
             self.delegate?.inventoryDidChange(sender: self)
-            self.updateCount()
         }
     }
     
-    func updateCount() {
-
-        buttonCount.text = "Turnips: \(Inventory.shared.item(for: Turnip.accessibilityName)!.count)"
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buttonCount.text = "Gold: \(Inventory.shared.totalGold)"
     }
 
     override func didReceiveMemoryWarning() {

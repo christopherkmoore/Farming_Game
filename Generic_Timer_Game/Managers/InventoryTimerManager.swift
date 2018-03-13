@@ -12,11 +12,11 @@ class InventoryTimerManager {
     
     public static let shared = InventoryTimerManager()
         
-    public func increment(item: Item, after interval: CFTimeInterval, completion: @escaping(Bool) -> Void) {
+    public func increment(food: Food, completion: @escaping(Bool) -> Void) {
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + interval) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + food.time) {
             
-            item.increase(count: 1)
+            Food.increase(item: food, by: 1)
             completion(true)
         }
         

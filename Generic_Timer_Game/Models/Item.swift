@@ -15,30 +15,61 @@ or whatever
  */
 
 
-protocol Item {
+public class Food: Item {
+    let time: Double
     
-    static var time: Double { get }
-    static var accessibilityName: String { get }
-    static var minPrice: Int { get }
-    static var maxPrice: Int { get }
+    init(time: Double, name: String, minPrice: Int, maxPrice: Int) {
+        self.time = time
+        
+        super.init(name: name, minPrice: minPrice, maxPrice: maxPrice)
+    }
     
-    func increase(count: Int)
-    func decrease(count: Int)
 }
 
-extension Item {
+public class Item: InventoryManageable {
+    
+    let name: String
+    let minPrice: Int
+    let maxPrice: Int
+    
+    init( name: String, minPrice: Int, maxPrice: Int) {
+        self.name = name
+        self.minPrice = minPrice
+        self.maxPrice = maxPrice
+    }
+   
+}
+
+extension Item: Hashable {
+    
+    public var hashValue: Int {
+        return name.hashValue
+    }
+
+    public static func ==(lhs: Item, rhs: Item) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+}
+
+
+public protocol InventoryManageable {
+    
+    static func increase(item: Item, by count: Int)
+    static func decrease(item: Item, by count: Int)
+}
+
+extension InventoryManageable {
     
     // MARK: - API for incrementing and decrementing total <T>
     
-    public func increase(count: Int) {
-        Inventory.shared.add(item: Self.accessibilityName, count: count)
+    public static func increase(item: Item, by count: Int) {
+        Inventory.shared.add(item: item, count: count)
     }
     
-    public func decrease(count: Int) {
-        Inventory.shared.decrease(item: Self.accessibilityName, count: count)
+    public static func decrease(item: Item, by count: Int) {
+        Inventory.shared.decrease(item: item, count: count)
     }
-    
-    
+
 }
 
 

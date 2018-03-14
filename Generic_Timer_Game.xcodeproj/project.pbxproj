@@ -30,6 +30,7 @@
 		03C2066F2058BC67002ED28F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2066E2058BC67002ED28F /* Player.swift */; };
 		03C206712058CC76002ED28F /* PlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C206702058CC76002ED28F /* PlotsViewModel.swift */; };
 		03C206742058D00B002ED28F /* PlotsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C206732058D00B002ED28F /* PlotsCollectionViewCell.xib */; };
+		03C206762058D0A5002ED28F /* PlotsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C206752058D0A5002ED28F /* PlotsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		03C2066E2058BC67002ED28F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		03C206702058CC76002ED28F /* PlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotsViewModel.swift; sourceTree = "<group>"; };
 		03C206732058D00B002ED28F /* PlotsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlotsCollectionViewCell.xib; sourceTree = "<group>"; };
+		03C206752058D0A5002ED28F /* PlotsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				032DA56A205454A60085BA83 /* KeyValueDetailsTableViewCell.swift */,
+				03C206752058D0A5002ED28F /* PlotsCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				032DA55E20524BC10085BA83 /* Item.swift in Sources */,
+				03C206762058D0A5002ED28F /* PlotsCollectionViewCell.swift in Sources */,
 				032DA57120560A350085BA83 /* ItemDetailsViewModel.swift in Sources */,
 				032DA56F20560A270085BA83 /* ItemDetailsViewController.swift in Sources */,
 				032DA5632054522D0085BA83 /* MarketplaceViewController.swift in Sources */,

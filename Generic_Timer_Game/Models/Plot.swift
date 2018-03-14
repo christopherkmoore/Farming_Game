@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum PlotState: Int {
     case empty
@@ -15,7 +16,7 @@ enum PlotState: Int {
     case growing
     case grown
     
-    enum Error: Swift.Error, EnumDescription  {
+    enum Error: Swift.Error, Description  {
         
         case unableToPlant(for: PlotState)
         
@@ -32,16 +33,44 @@ enum PlotState: Int {
         }
         return newState
     }
+    
+    func image() -> UIColor {
+        switch self {
+        case .empty: return .green
+        case .tilled: return .brown
+        case .planted: return .blue
+        case .growing: return .yellow
+        case .grown: return .black
+        }
+    }
+    
 }
 
 class Plot {
     
     var state: PlotState = .empty
+    var image: UIColor {
+        return state.image()
+    }
     
-    func plant(seed: Seed) throws {
+    func plant(seed: Seed, growingCompleted: @escaping (Bool) -> Void) throws {
         guard self.state == .tilled else {
             throw PlotState.Error.unableToPlant(for: self.state)
         }
         self.state = state.advance()
+        
+        InventoryTimerManager.shared.increment(food: seed.associatedFood) { success, sender in
+            guard success == true else {
+                return
+            }
+            self.state = self.state.advance()
+            Inventory.shared.add(item: seed.associatedFood, count: 1)
+            growingCompleted(true)
+        }
+        growingCompleted(false)
+        self.state = state.advance()
+        
     }
+    
+   
 }

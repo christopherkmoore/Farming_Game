@@ -7,20 +7,22 @@
 //
 
 import Foundation
+import UIKit
 
 class InventoryTimerManager {
     
     public static let shared = InventoryTimerManager()
         
-    public func increment(food: Food, completion: @escaping(Bool) -> Void) {
+    public func increment(food: Food, sender: UIViewController? = nil, completion: @escaping(_ success: Bool, _ sender: UIViewController?) -> Void) {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + food.time) {
             
             Food.increase(item: food, by: 1)
-            completion(true)
+                completion(true, nil)
+            
+            completion(true, sender)
         }
-        
-        completion(false)
+        completion(false, sender)
     }
     
 }

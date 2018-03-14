@@ -10,10 +10,16 @@ import Foundation
 
 class Seed {
     
-    var associatedFood: Food?
-    var price: Int? 
+    var associatedFood: Food
+    var price: Int
     var growTime: Double? {
-        return associatedFood?.time
+        return associatedFood.time
+    }
+    
+    // TODO: Make failable initializer if not enough $$$
+    init(food: Food, price: Int) {
+        self.associatedFood = food
+        self.price = price
     }
     
 }

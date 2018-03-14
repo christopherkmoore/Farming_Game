@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 enum InventoryError: Swift.Error {
     case insufficientStock(amountNeeded: Int)
 }
@@ -106,6 +107,19 @@ class Inventory {
         } else {
             items[item]? = newTotal
         }
+    }
+    
+    public func plot(at index: Int) throws -> Plot {
+        guard index <= plots.count else {
+            throw GenericError.indexOutOfBounds
+        }
+        return plots[index]
+    }
+    
+    public func update(plot: Plot, at index: Int) {
+        // TODO: make not shitty
+        plots.remove(at: index)
+        plots[index] = plot
     }
     
     public func count(for item: Item) -> Int {

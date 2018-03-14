@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     var delegate: InventoryChange?
@@ -31,13 +32,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(goldDidChange), name: Notification.Name.goldChanged, object: nil)
         buttonCount.text = "Gold: \(Inventory.shared.totalGold)"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @objc func goldDidChange() {
+        buttonCount.text = "Gold: \(Inventory.shared.totalGold)"
     }
+    
 
 
 }

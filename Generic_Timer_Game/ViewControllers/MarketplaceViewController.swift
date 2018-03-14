@@ -88,6 +88,9 @@ extension MarketplaceViewController: UITableViewDelegate, UITableViewDataSource 
         let detailsVC = ItemDetailsViewController.create()
         
         detailsVC.item = item
+        let vc = tabBarController?.viewControllers?.first as? ViewController
+
+        detailsVC.delegate = vc?.delegate
         present(detailsVC, animated: true)
         
     }

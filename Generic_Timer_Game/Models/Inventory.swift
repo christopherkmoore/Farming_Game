@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+enum InventoryError: Swift.Error {
+    case insufficientStock(amountNeeded: Int)
+}
 
 class Inventory {
     
     public static let shared = Inventory()
     
     private var gold: Int = 100
+    public static let goldNotificationKey = "goldChanged"
     
     public var totalItem: Int {
         return items.count
@@ -40,6 +46,18 @@ class Inventory {
         self.gold += gold
     }
     
+    public func add(gold: Int, removing item: Item, count: Int, with delegate: InventoryChange? = nil, updating viewController: UIViewController? = nil) {
+        self.gold += gold
+        
+        try? decrease(item: item, count: count)
+        
+        if let delegate = delegate,
+            let viewController = viewController {
+            
+         delegate.inventoryDidChange(sender: viewController)
+        }
+    }
+    
     public func remove(gold: Int) {
         self.gold -= gold
     }
@@ -59,19 +77,29 @@ class Inventory {
 
     }
 
-    public func decrease(item: Item, count: Int) {
+    public func decrease(item: Item, count: Int) throws {
 
         guard let itemCount = items[item],
-            itemCount > count else {
+            itemCount >= count else {
                 return
         }
-
-        items[item]? -= count
+        
+        let newTotal = itemCount - count
+        if newTotal < 0 {
+            // should probably throw error
+            throw InventoryError.insufficientStock(amountNeeded: newTotal)
+        }
+        
+        if newTotal == 0 {
+            items.removeValue(forKey: item)
+        } else {
+            items[item]? = newTotal
+        }
     }
     
     public func count(for item: Item) -> Int {
         return items[item] ?? 0
     }
-    
+
     
 }

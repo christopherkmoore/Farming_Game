@@ -67,7 +67,7 @@ extension InventoryManageable {
     }
     
     public static func decrease(item: Item, by count: Int) {
-        Inventory.shared.decrease(item: item, count: count)
+        try? Inventory.shared.decrease(item: item, count: count)
     }
 
 }

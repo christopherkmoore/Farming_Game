@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+extension Notification.Name {
+    public static let goldChanged = Notification.Name(rawValue: Inventory.goldNotificationKey)
+}
+
 extension UIButton {
     
     @IBInspectable var borderWidth: CGFloat {

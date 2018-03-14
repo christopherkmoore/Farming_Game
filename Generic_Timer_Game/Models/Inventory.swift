@@ -21,6 +21,10 @@ class Inventory {
     private var plots: [Plot] = []
     public static let goldNotificationKey = "goldChanged"
     
+    public var totalPlots: Int {
+        return plots.count
+    }
+    
     public var totalItem: Int {
         return items.count
     }

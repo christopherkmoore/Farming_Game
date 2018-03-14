@@ -33,7 +33,7 @@ class MarketplaceViewController: UIViewController, InventoryChange {
         
     }
     func setDelegates () {
-        let vc = tabBarController?.viewControllers?.first as? ViewController
+        let vc = tabBarController?.viewControllers?.first as? PlotsViewController
         vc?.delegate = self
     }
     
@@ -88,7 +88,7 @@ extension MarketplaceViewController: UITableViewDelegate, UITableViewDataSource 
         let detailsVC = ItemDetailsViewController.create()
         
         detailsVC.item = item
-        let vc = tabBarController?.viewControllers?.first as? ViewController
+        let vc = tabBarController?.viewControllers?.first as? PlotsViewController
 
         detailsVC.delegate = vc?.delegate
         present(detailsVC, animated: true)

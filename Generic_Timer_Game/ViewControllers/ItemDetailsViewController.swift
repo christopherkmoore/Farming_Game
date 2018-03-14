@@ -51,7 +51,7 @@ class ItemDetailsViewController: UIViewController {
         
         guard let item = item else { return }
         
-        let vc = tabBarController?.viewControllers?.first as? ViewController
+        let vc = tabBarController?.viewControllers?.first as? PlotsViewController
         
         Inventory.shared.add(gold: price * amountToSell, removing: item, count: amountToSell, with: delegate, updating: vc)
         
@@ -61,11 +61,13 @@ class ItemDetailsViewController: UIViewController {
     }
     
     @IBAction func sellAll(_ sender: Any) {
+        
+        guard let text = itemCount.text,
+            let count = Int(text),
+            validate(inventoryCount: count) else { return }
+        
         sellTextField.becomeFirstResponder()
         sellTextField.text = itemCount.text
-        guard let text = itemCount.text,
-            let count = Int(text) else { return }
-        validate(inventoryCount: count)
         sellTextField.endEditing(true)
     }
     

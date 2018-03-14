@@ -113,6 +113,7 @@ extension PlotsViewController: UICollectionViewDelegate, UICollectionViewDataSou
                         if doneGrowing {
                             self.delegate?.inventoryDidChange(sender: self)
                             DispatchQueue.main.async {
+                                self.plotsLabel.text = "Plots: \(Inventory.shared.emptyPlots)"
                                 collectionView.reloadItems(at: [indexPath])
                             }
                         }
@@ -132,6 +133,7 @@ extension PlotsViewController: UICollectionViewDelegate, UICollectionViewDataSou
             
         }
         
+        plotsLabel.text = "Plots: \(Inventory.shared.emptyPlots)"
         collectionView.reloadItems(at: [indexPath])
     }
     

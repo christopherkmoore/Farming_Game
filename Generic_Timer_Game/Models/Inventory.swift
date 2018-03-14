@@ -34,6 +34,13 @@ class Inventory {
         return gold
     }
     
+    public var emptyPlots: Int {
+        let temp = plots.filter { plot in
+            return plot.state == .empty 
+        }
+        return temp.count
+    }
+    
     // TODO: need to make class for all the items and func for returning all of them
     private var items: [Item: Int] = [:]
     

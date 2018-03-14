@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol EnumDescription {
+    var description: String { get }
+}
+
 extension Notification.Name {
     public static let goldChanged = Notification.Name(rawValue: Inventory.goldNotificationKey)
 }

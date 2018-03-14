@@ -25,6 +25,9 @@
 		032DA57320560B060085BA83 /* ItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032DA57220560B060085BA83 /* ItemDetailsViewController.xib */; };
 		032DA577205618C80085BA83 /* InventoryTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA576205618C80085BA83 /* InventoryTimerManager.swift */; };
 		03C2066920578062002ED28F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2066820578062002ED28F /* Extensions.swift */; };
+		03C2066B2058BC46002ED28F /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2066A2058BC46002ED28F /* Plot.swift */; };
+		03C2066D2058BC51002ED28F /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2066C2058BC51002ED28F /* Seed.swift */; };
+		03C2066F2058BC67002ED28F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2066E2058BC67002ED28F /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		032DA57220560B060085BA83 /* ItemDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailsViewController.xib; sourceTree = "<group>"; };
 		032DA576205618C80085BA83 /* InventoryTimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTimerManager.swift; sourceTree = "<group>"; };
 		03C2066820578062002ED28F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		03C2066A2058BC46002ED28F /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		03C2066C2058BC51002ED28F /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
+		03C2066E2058BC67002ED28F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +136,11 @@
 		032DA55720524A3B0085BA83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				032DA55D20524BC10085BA83 /* Item.swift */,
 				032DA55F205451660085BA83 /* Inventory.swift */,
+				032DA55D20524BC10085BA83 /* Item.swift */,
+				03C2066A2058BC46002ED28F /* Plot.swift */,
+				03C2066C2058BC51002ED28F /* Seed.swift */,
+				03C2066E2058BC67002ED28F /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +307,9 @@
 				032DA57120560A350085BA83 /* ItemDetailsViewModel.swift in Sources */,
 				032DA56F20560A270085BA83 /* ItemDetailsViewController.swift in Sources */,
 				032DA5632054522D0085BA83 /* MarketplaceViewController.swift in Sources */,
+				03C2066F2058BC67002ED28F /* Player.swift in Sources */,
+				03C2066B2058BC46002ED28F /* Plot.swift in Sources */,
+				03C2066D2058BC51002ED28F /* Seed.swift in Sources */,
 				032DA565205452390085BA83 /* MarketplaceViewModel.swift in Sources */,
 				032DA56B205454A60085BA83 /* KeyValueDetailsTableViewCell.swift in Sources */,
 				032DA577205618C80085BA83 /* InventoryTimerManager.swift in Sources */,

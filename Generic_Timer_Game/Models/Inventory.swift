@@ -18,6 +18,7 @@ class Inventory {
     public static let shared = Inventory()
     
     private var gold: Int = 100
+    private var plots: [Plot] = []
     public static let goldNotificationKey = "goldChanged"
     
     public var totalItem: Int {
@@ -30,6 +31,12 @@ class Inventory {
     
     // TODO: need to make class for all the items and func for returning all of them
     private var items: [Item: Int] = [:]
+    
+    init() {
+        for _ in 0...4 {
+            plots.append(Plot())
+        }
+    }
     
     public func add(item: Item, count: Int) {
 

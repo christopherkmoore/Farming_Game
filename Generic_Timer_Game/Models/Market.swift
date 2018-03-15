@@ -11,11 +11,15 @@ import Foundation
 
 class Market {
     
+    public static let shared = Market()
+
     let inventory: [Item] = []
-    var seed: [Seed] = []
+    private var seed: [Seed] = []
     var possibleSeeds: [StaticGrowable.Type] = [Turnip.self, Tomato.self]
     
-    public static let shared = Market()
+    var totalSeeds: Int {
+        return seed.count
+    }
     
     init() {
         generateSeeds()
@@ -30,7 +34,7 @@ class Market {
                 
         var seeds = possibleSeeds
             .filter { seed in
-                return Player.shared.level < seed.availableAtLevel
+                return Player.shared.level >= seed.availableAtLevel
             }
             .flatMap {
                 return Seed(from: $0)
@@ -39,5 +43,8 @@ class Market {
         self.seed = seeds
     }
     
+    public func seed(at index: Int) -> Seed {
+        return seed[index]
+    }
     
 }

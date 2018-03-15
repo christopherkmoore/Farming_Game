@@ -15,21 +15,26 @@ protocol InventoryChange {
 
 class InventoryViewController: UIViewController, InventoryChange {
     
-    var viewModel: InventoryViewModel?
+    var inventoryViewModel: InventoryViewModel?
+    var marketViewModel: MarketViewModel?
+    var isInventory = false
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         setupTableView()
         setDelegates()
-        viewModel = InventoryViewModel()
+        
+        inventoryViewModel = InventoryViewModel()
+        marketViewModel = MarketViewModel()
+
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
-        viewModel = InventoryViewModel()
+        inventoryViewModel = InventoryViewModel()
         
     }
     
@@ -49,19 +54,29 @@ class InventoryViewController: UIViewController, InventoryChange {
     }
     
     func inventoryDidChange(sender: UIViewController) {
-        viewModel = InventoryViewModel()
+        inventoryViewModel = InventoryViewModel()
         tableView.reloadData()
     }
     
-    @IBAction func change(_ sender: Any) {
-        
+    @IBAction func change(_ sender: UIButton) {
+        isInventory = !isInventory
+        if sender.titleLabel?.text == "Inventory" {
+            sender.setTitle("Market", for: UIControlState.normal)
+        } else {
+            sender.setTitle("Inventory", for: UIControlState.normal)
+        }
+        tableView.reloadData()
     }
 }
 
 extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfCells() ?? 0
+        if isInventory {
+            return inventoryViewModel?.numberOfCells() ?? 0
+        } else {
+            return marketViewModel?.numberOfCells() ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,15 +84,24 @@ extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: KeyValueDetailsTableViewCell.identifier) as? KeyValueDetailsTableViewCell else {
             return UITableViewCell()
         }
-        
-        let tuple = viewModel?.details(at: indexPath.row)
-        
-        guard let name = tuple?.item.name,
-            let count = tuple?.count else {
+        if isInventory {
+            let tuple = inventoryViewModel?.details(at: indexPath.row)
+            
+            guard let name = tuple?.item.name,
+                let count = tuple?.count else {
+                    return UITableViewCell()
+            }
+            
+            cell.set(tableView: name, and: count)
+        } else {
+            guard let seed = marketViewModel?.details(at: indexPath.row) else {
                 return UITableViewCell()
+                
+            }
+            
+            cell.set(tableView: "\(seed.associatedFood.name) seed", and: "1")
         }
         
-        cell.set(tableView: name, and: count)
         return cell
     }
     
@@ -86,7 +110,7 @@ extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     
         // cheap error handling
-        guard let item = viewModel?.details(at: indexPath.row)?.item else {
+        guard let item = inventoryViewModel?.details(at: indexPath.row)?.item else {
             return
         }
         

@@ -16,8 +16,10 @@ or whatever
 
 
 public class Food: Item {
+    let time: Double
     
     init(time: Double, name: String, minPrice: Int, maxPrice: Int) {
+        self.time = time
         
         super.init(name: name, minPrice: minPrice, maxPrice: maxPrice)
     }

@@ -9,16 +9,7 @@
 import Foundation
 import UIKit
 
-enum GenericError: Swift.Error, Description {
-    case indexOutOfBounds
-    
-    var description: String {
-        switch self {
-        case .indexOutOfBounds: return "Index out of bound for array"
-        }
-    }
-}
-protocol Description {
+protocol EnumDescription {
     var description: String { get }
 }
 

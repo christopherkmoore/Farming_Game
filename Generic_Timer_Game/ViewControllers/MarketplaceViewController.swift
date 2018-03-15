@@ -13,28 +13,27 @@ protocol InventoryChange {
     func inventoryDidChange (sender: UIViewController)
 }
 
-class InventoryViewController: UIViewController, InventoryChange {
+class MarketplaceViewController: UIViewController, InventoryChange {
     
-    var viewModel: InventoryViewModel?
+    var viewModel: MarketplaceViewModel?
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         setupTableView()
         setDelegates()
-        viewModel = InventoryViewModel()
+        viewModel = MarketplaceViewModel()
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
-        viewModel = InventoryViewModel()
+        viewModel = MarketplaceViewModel()
         
     }
-    
     func setDelegates () {
-        let vc = tabBarController?.viewControllers?.first as? PlotsViewController
+        let vc = tabBarController?.viewControllers?.first as? ViewController
         vc?.delegate = self
     }
     
@@ -49,16 +48,12 @@ class InventoryViewController: UIViewController, InventoryChange {
     }
     
     func inventoryDidChange(sender: UIViewController) {
-        viewModel = InventoryViewModel()
+        viewModel = MarketplaceViewModel()
         tableView.reloadData()
-    }
-    
-    @IBAction func change(_ sender: Any) {
-        
     }
 }
 
-extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
+extension MarketplaceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.numberOfCells() ?? 0
@@ -93,7 +88,7 @@ extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
         let detailsVC = ItemDetailsViewController.create()
         
         detailsVC.item = item
-        let vc = tabBarController?.viewControllers?.first as? PlotsViewController
+        let vc = tabBarController?.viewControllers?.first as? ViewController
 
         detailsVC.delegate = vc?.delegate
         present(detailsVC, animated: true)

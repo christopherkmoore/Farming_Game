@@ -8,7 +8,7 @@
 
 import Foundation
 
-class InventoryViewModel {
+class MarketplaceViewModel {
     
     public func numberOfCells() -> Int {
         return Inventory.shared.totalItem

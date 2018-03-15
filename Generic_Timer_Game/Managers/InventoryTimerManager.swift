@@ -7,17 +7,20 @@
 //
 
 import Foundation
-import UIKit
 
 class InventoryTimerManager {
     
     public static let shared = InventoryTimerManager()
         
-    public func grow(seed: Seed, completion: @escaping(_ success: Bool) -> Void) {
+    public func increment(food: Food, completion: @escaping(Bool) -> Void) {
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + seed.growTime) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + food.time) {
+            
+            Food.increase(item: food, by: 1)
             completion(true)
         }
+        
         completion(false)
     }
+    
 }

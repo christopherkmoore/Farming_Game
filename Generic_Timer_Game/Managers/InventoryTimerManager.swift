@@ -13,16 +13,11 @@ class InventoryTimerManager {
     
     public static let shared = InventoryTimerManager()
         
-    public func increment(food: Food, sender: UIViewController? = nil, completion: @escaping(_ success: Bool, _ sender: UIViewController?) -> Void) {
+    public func grow(food: Food, completion: @escaping(_ success: Bool) -> Void) {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + food.time) {
-            
-            Food.increase(item: food, by: 1)
-                completion(true, nil)
-            
-            completion(true, sender)
+            completion(true)
         }
-        completion(false, sender)
+        completion(false)
     }
-    
 }

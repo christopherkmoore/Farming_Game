@@ -18,11 +18,11 @@ enum PlotState: Int {
     
     enum Error: Swift.Error, Description  {
         
-        case unableToPlant(for: PlotState)
+        case unactionableState(for: PlotState, action: String)
         
         var description: String {
             switch self {
-            case .unableToPlant(let state): return "Unable to plant in state \(state)"
+            case .unactionableState(let state, let action): return "Unable to perform action \(action) in state \(state)"
             }
         }
     }
@@ -53,23 +53,39 @@ class Plot {
         return state.image()
     }
     
-    func plant(seed: Seed, growingCompleted: @escaping (Bool) -> Void) throws {
+    func plant(seed: Seed) throws {
         guard self.state == .tilled else {
-            throw PlotState.Error.unableToPlant(for: self.state)
+            throw PlotState.Error.unactionableState(for: self.state, action: #function)
         }
         self.state = state.advance()
+    }
+    
+    func water(seed: Seed, growingCompleted: @escaping (Bool) -> Void) throws {
+        guard self.state == .planted else {
+            throw PlotState.Error.unactionableState(for: self.state, action: #function)
+        }
         
-        InventoryTimerManager.shared.increment(food: seed.associatedFood) { success, sender in
+        InventoryTimerManager.shared.grow(food: seed.associatedFood) { success in
             guard success == true else {
                 return
             }
             self.state = self.state.advance()
-            Inventory.shared.add(item: seed.associatedFood, count: 1)
             growingCompleted(true)
         }
+        self.state = self.state.advance()
         growingCompleted(false)
-        self.state = state.advance()
+
+    }
+    
+    func harvest(seed: Seed, harvested: @escaping (Bool) -> Void) throws {
+        guard self.state == .grown else {
+            throw PlotState.Error.unactionableState(for: self.state, action: #function)
+        }
         
+        self.state = self.state.advance()
+        Inventory.shared.add(item: seed.associatedFood, count: 1)
+        harvested(true)
+
     }
     
    

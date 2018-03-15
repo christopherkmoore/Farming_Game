@@ -183,9 +183,9 @@
 		032DA56D205609C50085BA83 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				03C206702058CC76002ED28F /* PlotsViewModel.swift */,
 				032DA564205452390085BA83 /* MarketplaceViewModel.swift */,
 				032DA57020560A350085BA83 /* ItemDetailsViewModel.swift */,
-				03C206702058CC76002ED28F /* PlotsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

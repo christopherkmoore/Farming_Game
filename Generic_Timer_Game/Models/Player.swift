@@ -10,6 +10,9 @@ import Foundation
 
 class Player {
     
-    var plots: Plot?
+    public static let shared = Player()
+    
+    var level = 1
+    var experience = 0
     
 }

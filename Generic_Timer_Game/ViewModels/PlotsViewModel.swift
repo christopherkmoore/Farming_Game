@@ -34,8 +34,7 @@ class PlotsViewModel {
     public func cellTapped(at index: Int, updateUI: @escaping ((_ needsUpdate: Bool)-> Void)) {
       
         // TODO: - Need to create selectable seed in UI and handle here
-        let food = Food(time: 3, name: "Turnip", minPrice: 10, maxPrice: 15)
-        let seed = Seed(food: food, price: 5)
+        let seed = Seed(from: Turnip.self)
         
         if let plot = plot(at: index) {
             switch plot.state {

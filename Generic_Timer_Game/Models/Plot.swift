@@ -65,7 +65,7 @@ class Plot {
             throw PlotState.Error.unactionableState(for: self.state, action: #function)
         }
         
-        InventoryTimerManager.shared.grow(food: seed.associatedFood) { success in
+        InventoryTimerManager.shared.grow(seed: seed) { success in
             guard success == true else {
                 return
             }

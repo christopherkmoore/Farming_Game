@@ -102,7 +102,7 @@
         <!--Marketplace-->
         <scene sceneID="BHq-aO-mzJ">
             <objects>
-                <viewController id="R4j-rC-Ewc" userLabel="Marketplace" customClass="MarketplaceViewController" customModule="Generic_Timer_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="R4j-rC-Ewc" userLabel="Marketplace" customClass="InventoryViewController" customModule="Generic_Timer_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p6n-fv-4Fk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

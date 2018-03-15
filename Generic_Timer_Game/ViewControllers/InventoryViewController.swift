@@ -13,25 +13,26 @@ protocol InventoryChange {
     func inventoryDidChange (sender: UIViewController)
 }
 
-class MarketplaceViewController: UIViewController, InventoryChange {
+class InventoryViewController: UIViewController, InventoryChange {
     
-    var viewModel: MarketplaceViewModel?
+    var viewModel: InventoryViewModel?
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         setupTableView()
         setDelegates()
-        viewModel = MarketplaceViewModel()
+        viewModel = InventoryViewModel()
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
-        viewModel = MarketplaceViewModel()
+        viewModel = InventoryViewModel()
         
     }
+    
     func setDelegates () {
         let vc = tabBarController?.viewControllers?.first as? PlotsViewController
         vc?.delegate = self
@@ -48,12 +49,16 @@ class MarketplaceViewController: UIViewController, InventoryChange {
     }
     
     func inventoryDidChange(sender: UIViewController) {
-        viewModel = MarketplaceViewModel()
+        viewModel = InventoryViewModel()
         tableView.reloadData()
+    }
+    
+    @IBAction func change(_ sender: Any) {
+        
     }
 }
 
-extension MarketplaceViewController: UITableViewDelegate, UITableViewDataSource {
+extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.numberOfCells() ?? 0

@@ -13,9 +13,9 @@ class InventoryTimerManager {
     
     public static let shared = InventoryTimerManager()
         
-    public func grow(food: Food, completion: @escaping(_ success: Bool) -> Void) {
+    public func grow(seed: Seed, completion: @escaping(_ success: Bool) -> Void) {
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + food.time) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seed.growTime) {
             completion(true)
         }
         completion(false)

@@ -8,18 +8,19 @@
 
 import Foundation
 
-class Seed {
+public class Seed {
     
     var associatedFood: Food
     var price: Int
-    var growTime: Double? {
-        return associatedFood.time
-    }
+    var experience: Int
+    var growTime: Double
     
-    // TODO: Make failable initializer if not enough $$$
-    init(food: Food, price: Int) {
+    init(from seed: StaticGrowable.Type) {
+        let food = Food(time: seed.growTime, name: seed.name, minPrice: seed.minPrice, maxPrice: seed.maxPrice)
         self.associatedFood = food
-        self.price = price
+        self.price = seed.seedPrice
+        self.experience = seed.experience
+        self.growTime = seed.growTime
     }
     
 }

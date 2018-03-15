@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031B97B7205A122A00E21AF1 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97B6205A122A00E21AF1 /* Market.swift */; };
+		031B97BA205A186600E21AF1 /* Turnip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97B9205A186600E21AF1 /* Turnip.swift */; };
+		031B97BC205A1E2A00E21AF1 /* Tomato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97BB205A1E2A00E21AF1 /* Tomato.swift */; };
+		031B97BE205A272200E21AF1 /* StaticGrowables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97BD205A272200E21AF1 /* StaticGrowables.swift */; };
 		032DA538205248D70085BA83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA537205248D70085BA83 /* AppDelegate.swift */; };
 		032DA53A205248D70085BA83 /* PlotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA539205248D70085BA83 /* PlotsViewController.swift */; };
 		032DA53D205248D70085BA83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032DA53B205248D70085BA83 /* Main.storyboard */; };
@@ -16,8 +20,8 @@
 		032DA55B20524B820085BA83 /* Backlog in Resources */ = {isa = PBXBuildFile; fileRef = 032DA55A20524B820085BA83 /* Backlog */; };
 		032DA55E20524BC10085BA83 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA55D20524BC10085BA83 /* Item.swift */; };
 		032DA560205451660085BA83 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA55F205451660085BA83 /* Inventory.swift */; };
-		032DA5632054522D0085BA83 /* MarketplaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA5622054522D0085BA83 /* MarketplaceViewController.swift */; };
-		032DA565205452390085BA83 /* MarketplaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA564205452390085BA83 /* MarketplaceViewModel.swift */; };
+		032DA5632054522D0085BA83 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA5622054522D0085BA83 /* InventoryViewController.swift */; };
+		032DA565205452390085BA83 /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA564205452390085BA83 /* InventoryViewModel.swift */; };
 		032DA568205453FB0085BA83 /* KeyValueDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032DA567205453FB0085BA83 /* KeyValueDetailsTableViewCell.xib */; };
 		032DA56B205454A60085BA83 /* KeyValueDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA56A205454A60085BA83 /* KeyValueDetailsTableViewCell.swift */; };
 		032DA56F20560A270085BA83 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA56E20560A270085BA83 /* ItemDetailsViewController.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031B97B6205A122A00E21AF1 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		031B97B9205A186600E21AF1 /* Turnip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turnip.swift; sourceTree = "<group>"; };
+		031B97BB205A1E2A00E21AF1 /* Tomato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomato.swift; sourceTree = "<group>"; };
+		031B97BD205A272200E21AF1 /* StaticGrowables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGrowables.swift; sourceTree = "<group>"; };
 		032DA534205248D70085BA83 /* Generic_Timer_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic_Timer_Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032DA537205248D70085BA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		032DA539205248D70085BA83 /* PlotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotsViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +65,8 @@
 		032DA55A20524B820085BA83 /* Backlog */ = {isa = PBXFileReference; lastKnownFileType = text; path = Backlog; sourceTree = "<group>"; };
 		032DA55D20524BC10085BA83 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		032DA55F205451660085BA83 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
-		032DA5622054522D0085BA83 /* MarketplaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceViewController.swift; sourceTree = "<group>"; };
-		032DA564205452390085BA83 /* MarketplaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceViewModel.swift; sourceTree = "<group>"; };
+		032DA5622054522D0085BA83 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		032DA564205452390085BA83 /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
 		032DA567205453FB0085BA83 /* KeyValueDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		032DA56A205454A60085BA83 /* KeyValueDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		032DA56E20560A270085BA83 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031B97B8205A185700E21AF1 /* StaticGrowables */ = {
+			isa = PBXGroup;
+			children = (
+				031B97B9205A186600E21AF1 /* Turnip.swift */,
+				031B97BB205A1E2A00E21AF1 /* Tomato.swift */,
+				031B97BD205A272200E21AF1 /* StaticGrowables.swift */,
+			);
+			path = StaticGrowables;
+			sourceTree = "<group>";
+		};
 		032DA52B205248D70085BA83 = {
 			isa = PBXGroup;
 			children = (
@@ -142,11 +160,13 @@
 		032DA55720524A3B0085BA83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				031B97B8205A185700E21AF1 /* StaticGrowables */,
 				032DA55F205451660085BA83 /* Inventory.swift */,
 				032DA55D20524BC10085BA83 /* Item.swift */,
 				03C2066A2058BC46002ED28F /* Plot.swift */,
 				03C2066C2058BC51002ED28F /* Seed.swift */,
 				03C2066E2058BC67002ED28F /* Player.swift */,
+				031B97B6205A122A00E21AF1 /* Market.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				032DA539205248D70085BA83 /* PlotsViewController.swift */,
-				032DA5622054522D0085BA83 /* MarketplaceViewController.swift */,
+				032DA5622054522D0085BA83 /* InventoryViewController.swift */,
 				032DA56E20560A270085BA83 /* ItemDetailsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -184,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				03C206702058CC76002ED28F /* PlotsViewModel.swift */,
-				032DA564205452390085BA83 /* MarketplaceViewModel.swift */,
+				032DA564205452390085BA83 /* InventoryViewModel.swift */,
 				032DA57020560A350085BA83 /* ItemDetailsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -317,11 +337,15 @@
 				03C206762058D0A5002ED28F /* PlotsCollectionViewCell.swift in Sources */,
 				032DA57120560A350085BA83 /* ItemDetailsViewModel.swift in Sources */,
 				032DA56F20560A270085BA83 /* ItemDetailsViewController.swift in Sources */,
-				032DA5632054522D0085BA83 /* MarketplaceViewController.swift in Sources */,
+				032DA5632054522D0085BA83 /* InventoryViewController.swift in Sources */,
+				031B97B7205A122A00E21AF1 /* Market.swift in Sources */,
+				031B97BE205A272200E21AF1 /* StaticGrowables.swift in Sources */,
 				03C2066F2058BC67002ED28F /* Player.swift in Sources */,
 				03C2066B2058BC46002ED28F /* Plot.swift in Sources */,
 				03C2066D2058BC51002ED28F /* Seed.swift in Sources */,
-				032DA565205452390085BA83 /* MarketplaceViewModel.swift in Sources */,
+				031B97BC205A1E2A00E21AF1 /* Tomato.swift in Sources */,
+				031B97BA205A186600E21AF1 /* Turnip.swift in Sources */,
+				032DA565205452390085BA83 /* InventoryViewModel.swift in Sources */,
 				032DA56B205454A60085BA83 /* KeyValueDetailsTableViewCell.swift in Sources */,
 				032DA577205618C80085BA83 /* InventoryTimerManager.swift in Sources */,
 				032DA560205451660085BA83 /* Inventory.swift in Sources */,

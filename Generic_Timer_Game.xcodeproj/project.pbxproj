@@ -11,6 +11,7 @@
 		031B97BA205A186600E21AF1 /* Turnip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97B9205A186600E21AF1 /* Turnip.swift */; };
 		031B97BC205A1E2A00E21AF1 /* Tomato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97BB205A1E2A00E21AF1 /* Tomato.swift */; };
 		031B97BE205A272200E21AF1 /* StaticGrowables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97BD205A272200E21AF1 /* StaticGrowables.swift */; };
+		031B97C0205A2E6000E21AF1 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031B97BF205A2E6000E21AF1 /* MarketViewModel.swift */; };
 		032DA538205248D70085BA83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA537205248D70085BA83 /* AppDelegate.swift */; };
 		032DA53A205248D70085BA83 /* PlotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DA539205248D70085BA83 /* PlotsViewController.swift */; };
 		032DA53D205248D70085BA83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032DA53B205248D70085BA83 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		031B97B9205A186600E21AF1 /* Turnip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turnip.swift; sourceTree = "<group>"; };
 		031B97BB205A1E2A00E21AF1 /* Tomato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomato.swift; sourceTree = "<group>"; };
 		031B97BD205A272200E21AF1 /* StaticGrowables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGrowables.swift; sourceTree = "<group>"; };
+		031B97BF205A2E6000E21AF1 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		032DA534205248D70085BA83 /* Generic_Timer_Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic_Timer_Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032DA537205248D70085BA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		032DA539205248D70085BA83 /* PlotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotsViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				03C206702058CC76002ED28F /* PlotsViewModel.swift */,
 				032DA564205452390085BA83 /* InventoryViewModel.swift */,
 				032DA57020560A350085BA83 /* ItemDetailsViewModel.swift */,
+				031B97BF205A2E6000E21AF1 /* MarketViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				032DA55E20524BC10085BA83 /* Item.swift in Sources */,
 				03C206762058D0A5002ED28F /* PlotsCollectionViewCell.swift in Sources */,
+				031B97C0205A2E6000E21AF1 /* MarketViewModel.swift in Sources */,
 				032DA57120560A350085BA83 /* ItemDetailsViewModel.swift in Sources */,
 				032DA56F20560A270085BA83 /* ItemDetailsViewController.swift in Sources */,
 				032DA5632054522D0085BA83 /* InventoryViewController.swift in Sources */,
